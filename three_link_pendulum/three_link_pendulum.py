@@ -96,9 +96,9 @@ points_rigid_body = [P_link1, P_link2, P_link3]
 
 #defining inertia tensors for links
 
-inertia_link1 = inertia(A, Ixx[0], Iyy[0], Izz[0], ixy=Ixy[0], iyz=Iyz[0], izx=Ixz[0])
-inertia_link2 = inertia(B, Ixx[1], Iyy[1], Izz[1], ixy=Ixy[1], iyz=Iyz[1], izx=Ixz[1])
-inertia_link3 = inertia(C, Ixx[2], Iyy[2], Izz[2], ixy=Ixy[2], iyz=Iyz[2], izx=Ixz[2])
+inertia_link1 = inertia(A, Ixx[0], Iyy[0], Izz[0], ixy = Ixy[0], iyz = Iyz[0], izx = Ixz[0])
+inertia_link2 = inertia(B, Ixx[1], Iyy[1], Izz[1], ixy = Ixy[1], iyz = Iyz[1], izx = Ixz[1])
+inertia_link3 = inertia(C, Ixx[2], Iyy[2], Izz[2], ixy = Ixy[2], iyz = Iyz[2], izx = Ixz[2])
 
 #Defining links as Rigid bodies ...
 
@@ -148,7 +148,7 @@ for vel in vel_beta:
     u.append(vel)
 
 print u		
-kane = KanesMethod(I, q_ind=q, u_ind=u, kd_eqs=kinetic_differentials)
+kane = KanesMethod(I, q_ind = q, u_ind = u, kd_eqs = kinetic_differentials)
 fr, frstar = kane.kanes_equations(forces, total_system)
 
 print fr
